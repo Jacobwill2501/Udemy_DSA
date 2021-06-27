@@ -6,15 +6,15 @@ public class EmployeeLinkedList {
     private EmployeeNode head;
     private int size;
 
-    public void addToFront(Employee employee){
+    public void addToFront(Employeee employee) {
         EmployeeNode node = new EmployeeNode(employee);
         node.setNext(head);
         head = node;
         size++;
     }
 
-    public EmployeeNode removeFromFront(){
-        if(isEmpty()){
+    public EmployeeNode removeFromFront() {
+        if (isEmpty()) {
             return null;
         }
 
@@ -27,7 +27,7 @@ public class EmployeeLinkedList {
     }
 
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return head == null;
     }
 
@@ -35,10 +35,10 @@ public class EmployeeLinkedList {
         return size;
     }
 
-    public void printList(){
+    public void printList() {
         EmployeeNode current = head;
         System.out.print("HEAD -> ");
-        while(current != null){
+        while (current != null) {
             System.out.print(current);
             System.out.print(" -> ");
             current = current.getNext();

@@ -3,19 +3,19 @@ package Udemy.List.LinkedList.Single;
 public class EmployeeNode {
 
     //field for employee
-    private Employee employee;
+    private Employeee employee;
     //field for reference to next node
     private EmployeeNode next;
 
-    public EmployeeNode(Employee employee){
+    public EmployeeNode(Employeee employee) {
         this.employee = employee;
     }
 
-    public Employee getEmployee() {
+    public Employeee getEmployee() {
         return employee;
     }
 
-    public void setEmployee(Employee employee) {
+    public void setEmployee(Employeee employee) {
         this.employee = employee;
     }
 

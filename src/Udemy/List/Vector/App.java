@@ -1,6 +1,6 @@
 package Udemy.List.Vector;
 
-import Udemy.List.LinkedList.Single.Employee;
+import Udemy.List.LinkedList.Single.Employeee;
 
 import java.util.List;
 import java.util.Vector;
@@ -28,14 +28,12 @@ ArrayList vs Vector -
  */
 
 
-
 public class App {
     public static void main(String[] args) throws Exception {
-        List<Employee> employeeList = new Vector<>();
-        employeeList.add(new Employee("Jacob", "Williams", 1));
-        employeeList.add(new Employee("Ashley", "Aguilera", 2));
-        employeeList.add(new Employee("Alyssa", "Aguilera", 3));
-
+        List<Employeee> employeeList = new Vector<>();
+        employeeList.add(new Employeee("Jacob", "Williams", 1));
+        employeeList.add(new Employeee("Ashley", "Aguilera", 2));
+        employeeList.add(new Employeee("Alyssa", "Aguilera", 3));
 
 
         System.out.println();

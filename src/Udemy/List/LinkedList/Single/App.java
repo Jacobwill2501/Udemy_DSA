@@ -1,7 +1,5 @@
 package Udemy.List.LinkedList.Single;
 
-import java.util.List;
-
 /*
 Notes from Udemy:
 Singly Linked List -
@@ -32,9 +30,9 @@ Storing extra field with every node
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Employee jacobWilliams = new Employee("Jacob", "Williams", 1);
-        Employee ashleyAguilera = new Employee("Ashley", "Aguilera", 2);
-        Employee alyssaAguilera = new Employee("Alyssa", "Aguilera", 3);
+        Employeee jacobWilliams = new Employeee("Jacob", "Williams", 1);
+        Employeee ashleyAguilera = new Employeee("Ashley", "Aguilera", 2);
+        Employeee alyssaAguilera = new Employeee("Alyssa", "Aguilera", 3);
 
         EmployeeLinkedList list = new EmployeeLinkedList();
 

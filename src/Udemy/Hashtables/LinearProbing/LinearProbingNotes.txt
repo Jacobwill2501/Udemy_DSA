@@ -1,0 +1,12 @@
+
+Common Strategies that handle collisions
+
+1. Open Addressing
+    - if we try to put an employee in the table, and we find out there
+    is something there already, we look for another position in the array
+    - different ways to look for other positions, here we will use Linear Probing
+    - Linear Probing: when we discover a position is in use or occupied, we increase the
+                      hash value by 1 and check the resulting index
+                      - done in a linear fashion time and every increment of the index is called a "probe" therefore, linear probing
+    -
+

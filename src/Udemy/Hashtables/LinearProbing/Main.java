@@ -1,4 +1,4 @@
-package Udemy.Hashtables.ArrayBacked;
+package Udemy.Hashtables.LinearProbing;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,17 +15,9 @@ public class Main {
         ht.put(mikeWilson.getLastName(), mikeWilson);
         ht.put(marySmith.getLastName(), marySmith);
 
-        //ht.printHashtable();
+        ht.printHashtable();
 
         System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
-
+        System.out.println("Retrieve key Smith: " + ht.get("Smith"));
     }
 }
-
-//Essentials of a hashtable
-/*
-- Put employee, you hash the key
-- then using the key, you put the employee at the appropriate place
-- When you Get employee, you have to use the same key and same hash function, then use the result
-of the hash function to retrieve the employee from hashtable
- */

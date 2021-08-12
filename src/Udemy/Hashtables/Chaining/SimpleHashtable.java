@@ -1,5 +1,4 @@
-package Udemy.Hashtables.LinearProbing;
-
+package Udemy.Hashtables.Chaining;
 
 public class SimpleHashtable {
 

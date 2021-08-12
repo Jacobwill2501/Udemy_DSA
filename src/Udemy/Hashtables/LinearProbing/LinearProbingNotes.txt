@@ -8,5 +8,19 @@ Common Strategies that handle collisions
     - Linear Probing: when we discover a position is in use or occupied, we increase the
                       hash value by 1 and check the resulting index
                       - done in a linear fashion time and every increment of the index is called a "probe" therefore, linear probing
-    -
 
+
+With the issue of rehashing, there are two ways to do it. Although each way takes a performance hit,
+but in different places.
+
+- Rehashing on remove
+    when you remove, you can rehash the entire hashtable to ensure everything is in the right place, causing
+    the performance hit to occur during removal. Leads to less load factor.
+- Introducing "Deleted" Value to your values
+    In the employee example, instead of removing the employee entirely from the table; you give a boolean
+    property to the employee class called "deleted". This would cause a performance hit on the method add
+    since you would have more linear probing on each add.
+
+
+There is another method outside of Linear Probing, that being Quadratic Probing where instead of
+incrementing by 1, you would increment by a constant squared.

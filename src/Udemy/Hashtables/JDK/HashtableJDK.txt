@@ -1,0 +1,11 @@
+Map interface in the JDK
+ - map cannot contain duplicate keys, each key can map to most one value
+
+HashMap class
+ -
+
+LinkedHashMap class
+ -
+
+ Hashtable class
+ - synchronized

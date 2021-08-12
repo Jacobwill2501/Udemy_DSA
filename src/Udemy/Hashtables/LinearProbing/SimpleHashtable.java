@@ -3,10 +3,10 @@ package Udemy.Hashtables.LinearProbing;
 
 public class SimpleHashtable {
 
-    private Employee[] hashtable;
+    private StoredEmployee[] hashtable;
 
     public SimpleHashtable() {
-        hashtable = new Employee[10];
+        hashtable = new StoredEmployee[10];
     }
 
     public void put(String key, Employee employee) {
@@ -35,17 +35,48 @@ public class SimpleHashtable {
         if (occupied(hashedKey)) {
             System.out.println("Sorry there is already an employee at position " + hashedKey);
         } else {
-            hashtable[hashedKey] = employee;
+            hashtable[hashedKey] = new StoredEmployee(key, employee);
         }
     }
 
     public Employee get(String key) {
-        int hashedKey = hashKey(key);
-        return hashtable[hashedKey];
+        int hashedKey = findKey(key);
+        if (hashedKey == -1) {
+            return null;
+        }
+        return hashtable[hashedKey].employee;
     }
 
     private int hashKey(String key) {
         return key.length() % hashtable.length;
+    }
+
+    //used to find the employee with givenkey
+    private int findKey(String key) {
+        int hashedKey = hashKey(key);
+        if (hashtable[hashedKey] != null && hashtable[hashedKey].key.equals(key)) {
+            return hashedKey;
+        }
+
+        int stopIndex = hashedKey;
+        if (hashedKey == hashtable.length - 1) {
+            hashedKey = 0;
+        } else {
+            hashedKey++;
+        }
+
+        while (hashedKey != stopIndex &&
+                hashtable[hashedKey] != null &&
+                !hashtable[hashedKey].key.equals(key)) {
+            hashedKey = (hashedKey + 1) % hashtable.length;
+        }
+
+        if (stopIndex == hashedKey) {
+            return -1;
+        } else {
+            return hashedKey;
+        }
+
     }
 
     //Will check if the index is occupied for use in linear probing method of avoiding collisions
@@ -54,8 +85,13 @@ public class SimpleHashtable {
     }
 
     public void printHashtable() {
-        for (Employee employee : hashtable) {
-            System.out.println(employee);
+        for (int i = 0; i < hashtable.length; i++) {
+            if (hashtable[i] == null) {
+                System.out.println("empty");
+            } else {
+                System.out.println("Position " + i + ": " + hashtable[i].employee);
+            }
+
         }
     }
 

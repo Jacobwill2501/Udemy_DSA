@@ -8,7 +8,7 @@ public class Main {
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
         Employee billEnd = new Employee("Bill", "End", 78);
 
-        SimpleHashtable ht = new SimpleHashtable();
+        ChainedHashtable ht = new ChainedHashtable();
 
         ht.put(janeJones.getLastName(), janeJones);
         ht.put(johnDoe.getLastName(), johnDoe);
@@ -16,15 +16,15 @@ public class Main {
         ht.put(marySmith.getLastName(), marySmith);
 
         ht.printHashtable();
-
-        System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
-        System.out.println("Retrieve key Smith: " + ht.get("Smith"));
-
-        ht.remove("Jones");
-        ht.remove("Wilson");
-
-        ht.printHashtable();
-
-        System.out.println("Retrieve key Smith: " + ht.get("Smith"));
+//
+//        System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
+//        System.out.println("Retrieve key Smith: " + ht.get("Smith"));
+//
+//        ht.remove("Jones");
+//        ht.remove("Wilson");
+//
+//        ht.printHashtable();
+//
+//        System.out.println("Retrieve key Smith: " + ht.get("Smith"));
     }
 }

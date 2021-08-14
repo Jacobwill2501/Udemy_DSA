@@ -46,4 +46,14 @@
  - you want BST to be as balanced as possible, self-balancing trees exist such as AVL tree and red-black trees
 
 
+ ***Implementing***
+- Node class needs -
+    fields: int value, Node leftChild, Node rightChild
+    methods: gets and sets for all, insert
+    constructor: takes in data, this.data = data;
+- Tree class needs:
+    fields: Node root
+    methods: insert
+
+
 

@@ -68,5 +68,20 @@
     - Visualized as water from left and filling up
     - Data is sorted in in-order
 
+ ***Searching***
+
+ - Basically binary search for searching
+ - Finding minimum value is going down left subtree
+ - Finding maximum value is going down right subtree
+
+ ***Delete***
+ - In BST you have to worry about children
+ - Three Possible Delete Cases
+     1. Node to delete is a leaf
+      - Just null out the parents left or right child
+     2. Node to delete has one child
+      - Replace the node you are deleting with the one child
+     3. Node to delete has two children
+
 
 

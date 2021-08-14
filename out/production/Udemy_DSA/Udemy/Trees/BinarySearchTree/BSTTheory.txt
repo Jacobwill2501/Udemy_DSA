@@ -49,7 +49,7 @@
  ***Implementing***
 - Node class needs -
     fields: int value, Node leftChild, Node rightChild
-    methods: gets and sets for all, insert, traverseInOrder
+    methods: gets and sets for all, insert, traverseInOrder, get
     constructor: takes in data, this.data = data;
 - Tree class needs:
     fields: Node root

@@ -1,0 +1,17 @@
+
+Common Strategies that handle collisions
+
+1. Open Addressing - Linear Probing
+does perform better on average, but chaining is easier to implement
+...
+
+2. Chaining
+
+    - When we use chaining, instead of storing a value directly into an array
+    each array position contains a linked-list so instead of storing employees you store a linked list.
+    - This style does use more memory.
+
+In chaining the time complexity in the worst case, every value would be collided into a linked list
+so the worst case for chaining is O(n) linear time.
+
+The key is a good hashing function to minimize collisions.

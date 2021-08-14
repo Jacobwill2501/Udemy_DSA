@@ -1,0 +1,49 @@
+ ***Binary Tree***
+
+ - Every node has 0, 1, or 2 children
+ - Children are referred to as left child and right child
+ - In practice, we use binary search trees
+ - Binary tree is complete if every level except the last level, has two children and on the last level,
+    all the nodes are as left as possible
+ - A FULL Binary tree is a complete tree while also every node besides the leaves, have two children
+ - This means every full binary tree is a complete tree
+
+ ***Binary Search Tree (BST)***
+
+ - Can perform insertions, deletions, and retrievals in O(log n) time
+ - The left child always has a smaller value than its parent
+ - The right child always has a larger value than its parent
+ - This means everything to the left of the root is less than the value of the root, and everything to
+    the right of the root is greater than the value of the root
+ - Because of that, we can do a binary search
+
+ ***Handling duplicate values***
+
+ - Have them not allowed in the BST
+ - Have them always in the left subtree or right subtree then stick to it
+ - Have a counter for each node for how many duplicate values there are
+
+ ***Insertion theory***
+
+ - Insert 25, 20, 15, 27, 30, 29, 26, 22, 32
+ looks for first open spot when following the rules set
+ 25 - first value is always put at the root of the tree
+ 20 - less than 25 so put to the left of 25
+ 15 - less than 25 so go down, less than 20 so put to the left of 20
+ 27 - greater than 25 so put to the right of 25
+ 30 - greater than 25 so go down to the right, greater than 27 so put to the right of 25
+ 29 - greater than 25 so go down to the right, greater than 27 so go down to the right,
+      less than 30 so put to the left of 30
+ 26 - greater than 25 so go down to the right, less than 27 so put to the left of 27
+ 22 - less than 25 so go down to the left, greater than 20 so put to the right of 20
+ 32 - greater than 25 so go down to the right, greater than 27 so go down to the right,
+      greater than 30 so put to the right of 30
+
+ - you can get the minimum value of the tree by following the left  subtree all the way down
+ - you can get the maximum value of the tree by following the right subtree all the way down
+ - if you insert sorted values into a BST, you'll end up with a linked list meaning you'll get linear time
+   instead of O(log n)
+ - you want BST to be as balanced as possible, self-balancing trees exist such as AVL tree and red-black trees
+
+
+

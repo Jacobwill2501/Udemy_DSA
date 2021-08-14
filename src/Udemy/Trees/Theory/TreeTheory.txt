@@ -1,0 +1,20 @@
+Trees
+- Hierarchical data structure
+- Each circle is a "node"
+- each node can only have one parent
+- have as many children as you want
+- root is at the top
+- Example: file system structure is a tree, each drive is a tree
+
+From video bullets:
+- Every item in the tree is a node
+- The node at the top of the tree is the root
+- Every non-root node has one and only one parent
+- A node with no children is called a "leaf node"
+- A singleton tree has only one node - the root
+
+
+- The height of a node is the number of edges on the longest path from the node to a leaf
+- Leaf nodes have a height of 0
+- The height of a tree is the height of its root node
+- The deoth of a node is the number of edges from the node to the tree's root node

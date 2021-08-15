@@ -16,11 +16,18 @@ public class Main {
         intTree.insert(17);
 
         intTree.traverseInOrder();
-        
         System.out.println();
-        System.out.println(intTree.get(27));
-        System.out.println(intTree.get(17));
-        System.out.println(intTree.get(888));
+//        System.out.println(intTree.get(27));
+//        System.out.println(intTree.get(17));
+//        System.out.println(intTree.get(888));
+
+//        intTree.delete(15);
+//        intTree.delete(17);
+//        intTree.delete(25);
+        intTree.delete(888);
+
+        intTree.traverseInOrder();
+        System.out.println();
 
     }
 }

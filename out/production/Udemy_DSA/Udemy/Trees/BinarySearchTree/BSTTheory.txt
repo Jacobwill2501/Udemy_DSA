@@ -49,11 +49,11 @@
  ***Implementing***
 - Node class needs -
     fields: int value, Node leftChild, Node rightChild
-    methods: gets and sets for all, insert, traverseInOrder, get
+    methods: gets and sets for all, insert, traverseInOrder, get, min, max
     constructor: takes in data, this.data = data;
 - Tree class needs:
     fields: Node root
-    methods: insert, traverseInOrder
+    methods: insert, traverseInOrder, get, min, max, delete
 
  ***Traversal***
  - Level: visit nodes on each level
@@ -67,6 +67,27 @@
     - For every node, completely visit its left subtree, then its root, then its right subtree
     - Visualized as water from left and filling up
     - Data is sorted in in-order
+
+ ***Searching***
+
+ - Basically binary search for searching
+ - Finding minimum value is going down left subtree
+ - Finding maximum value is going down right subtree
+
+ ***Delete***
+ - In BST you have to worry about children
+ - Three Possible Delete Cases
+     1. Node to delete is a leaf
+      - Just null out the parents left or right child
+     2. Node to delete has one child
+      - Replace the node you are deleting with the one child
+     3. Node to delete has two children
+      - Need to figure out what the replacement node will be
+      - Want minimal disruption to the existing tree structure
+      - Can take the replacement node from the deleted node's left subtree or right subtree
+      - If taking it from the left subtree, we have to take the largest value in the left subtree
+      - If taking it from the right subtree, we have to take the smallest value in the right subtree
+      - Choose one and stick to ti
 
 
 

@@ -1,0 +1,8 @@
+TreeMap class
+- key value based
+- redblack tree: self balancing tree , the preferred tree these days
+- guarantees O(log n) because its a BST
+- not synchronised
+
+TreeSet class
+

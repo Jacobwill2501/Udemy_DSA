@@ -26,14 +26,14 @@ left child = 2i + 1
 right child = 2i + 2
 parent = floor((i - 1) / 2)
 
-Insert into Heap
+Insert into Heap O(log n)
 - Always add new items to the end of the array
 - Then we have to fix the heap (heapify)
 - We compare the new item against its parent
 - If the item is greater than its parent, we swap it with its parent
 - We then rinse and repeat
 
-Heaps - Delete
+Heaps - Delete O(n)
  - Must choose a replacement value
  - Will take the rightmost value, so that the tree remains complete
  - Then we must heapify the heap
@@ -43,3 +43,17 @@ Heaps - Delete
  - Fix heap below - swap the replacement value with the larger of its two children
  - Rinse and repeat in both case until the replacement value is in its correct position
  - Will only need to fix up or down, not both
+
+
+Priority Queues are typically implemented as a max heap
+PriorityQueue in JDK
+- no limited size
+- implemeneted as min heap
+- not synced
+
+Heaps - Sort
+- We know the root has the largest value
+- Swap root with the last element in the array
+- Heapify the tree, but exclude the last node
+- After heapify, second largest element is at the root
+- Rinse and repeat

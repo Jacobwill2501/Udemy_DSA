@@ -1,1 +1,34 @@
 Heaps
+- A complete binary tree
+- Must satisfy the heap property
+- Max heap: Every parent is greater than or equal to its children
+    - All the values in a single path from the root are in descending order
+- Min heap: Every parent is less than or equal to its children
+    - All the values in a single path from the root are in ascending order
+- Heaps give min or max values in constant time
+
+- A binary heap must be a complete tree
+- Children are added at each level from left to right
+- Usually implemented as arrays
+- The maximum or minimum value will always be at the root of the tree - the advantage of using a heap
+- Heapify: process of converting a binary tree into a heap -
+    this often has to be done after an insertion or deletion
+- No required ordering between siblings
+
+Heaps as Arrays
+- We can store binary heaps as arrays
+- We put the root at array[0]
+- We then traverse each level from left to right, and so the left child of the root would go into array[1],
+    its right child would to into array[2], etc.
+
+For the node at array[i]:
+left child = 2i + 1
+right child = 2i + 2
+parent = floor((i - 1) / 2)
+
+Insert into Heap
+- Always add new items to the end of the array
+- Then we have to fix the heap (heapify)
+- We compare the new item against its parent
+- If the item is greater than its parent, we swap it with its parent
+- We then rinse and repeat

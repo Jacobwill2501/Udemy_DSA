@@ -24,6 +24,14 @@ public class Heap {
 
     }
 
+    public int peek() {
+        if (isEmpty()) {
+            throw new IndexOutOfBoundsException("heap is empty");
+        }
+
+        return heap[0];
+    }
+
     public int delete(int index) {
         if (isEmpty()) {
             throw new IndexOutOfBoundsException("heap is empty");
